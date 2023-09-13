@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %} Dashboard {% endblock %}
+{% block content %}
+<h1 style="text-align: center;" >My items</h1>
+<div class="item">
+  <!-- Start of the items row -->
+  <div class="row">
+    {% for item in items %}
+    <!-- Card -->
+    <div class="col-md-4">
+        <a style="text-decoration: none;" href="{% url 'item:detail' item.id %}">
+        <div class="card">
+            <img src="{{item.image.url}}" class="card-img-top" alt="Image 1">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-text">Price: {{item.price}}</p>
+            </div>
+        </div>
+    </a>
+    </div>
+    {% endfor %}
+</div> <!-- End of the items row -->
+</div>
+{% endblock %}
+
+
+
+
