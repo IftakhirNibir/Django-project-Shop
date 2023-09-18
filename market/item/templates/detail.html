@@ -21,10 +21,10 @@
             {% endif %}
             <div class="mt-4">
                 {% if request.user == item.created_by %}
-                <a href="{% url 'item:edit' item.id %}" class="btn btn-light"><sub><ion-icon name="create-outline" style="font-size: 20px;"></ion-icon></sub> Edit</a>
-                <a href="{% url 'item:delete' item.id %}" class="btn btn-light"><sub><ion-icon name="close-circle-outline" style="font-size: 20px;"></ion-icon></sub> Delete</a>
+                <a style="border: 1px solid #C0C0C0;" href="{% url 'item:edit' item.id %}" class="btn btn-light"><sub><ion-icon name="create-outline" style="font-size: 20px;"></ion-icon></sub> Edit</a>
+                <a style="border: 1px solid #C0C0C0;" href="{% url 'item:delete' item.id %}" class="btn btn-light"><sub><ion-icon name="close-circle-outline" style="font-size: 20px;"></ion-icon></sub> Delete</a>
                 {% else %}
-                <a href="{% url 'conversation:new' item.id %}" class="btn btn-light">Contact Seller</a>
+                <a style="border: 1px solid #C0C0C0;" href="{% url 'conversation:new' item.id %}" class="btn btn-light"><sub><ion-icon name="paper-plane-outline" style="font-size: 20px;"></ion-icon></sub> Contact Seller</a>
                 {% endif %}
             </div>
         </div>

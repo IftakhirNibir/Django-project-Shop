@@ -3,7 +3,7 @@
 {% block title %}Inbox{% endblock %}
 
 {% block content %}
-<h1>Inbox</h1>
+<h2>Messages</h2>
     {% for conversation in conversations %}
     <a href="{% url 'conversation:detail' conversation.id %}" class="text-decoration-none">
         <div class="row bg-light mb-3" style="border-radius: 15px;">
@@ -21,4 +21,7 @@
         </div>
     </a>
     {% endfor %}
+    <div style="margin-bottom: 270px;" class="space">
+
+    </div>
 {% endblock %}

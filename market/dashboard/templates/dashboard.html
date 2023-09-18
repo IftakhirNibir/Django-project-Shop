@@ -1,7 +1,19 @@
 {% extends 'base.html' %}
 {% block title %} Dashboard {% endblock %}
 {% block content %}
-<h1 style="text-align: center;" >My items</h1>
+{% if request.user.is_authenticated %}
+<div class="icon" style="text-align: center;">
+<ion-icon name="person-circle" style="font-size: 90px;"></ion-icon>
+<p><b>Username: </b>{{request.user.username}}</p>
+<p><b>Email address: </b>{{request.user.email}}</p>
+</div>
+{% endif %}
+<div style="display: flex;">
+    <hr style="flex-grow: 1;">
+    <h2 style="text-align: center; margin: 0 10px; margin-bottom: 8px;" >My items</h2>
+    <hr style="flex-grow: 1;">
+</div>
+
 <div class="item">
   <!-- Start of the items row -->
   <div class="row">

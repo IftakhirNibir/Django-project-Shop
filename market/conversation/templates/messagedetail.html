@@ -22,7 +22,7 @@
     <form method="post" action=".">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-light">Send <sub><ion-icon name="send-outline" style="font-size: 18px;"></ion-icon></sub></button>
+        <button style="border: 1px solid #C0C0C0;" type="submit" class="btn btn-light">Send <sub><ion-icon name="send-outline" style="font-size: 18px;"></ion-icon></sub></button>
     </form>
 </div>
 
@@ -42,6 +42,7 @@
         border-radius: 15px;
         padding: 3px;
         margin-bottom: 10px;
+        padding-left: 15px;
     }
 
     .sendingform{
